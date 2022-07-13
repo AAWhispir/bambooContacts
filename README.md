@@ -20,6 +20,9 @@ The script can be modified to load from 'FILE' or 'API' as the default.
 `var bambooSource = 'API'` options: 'FILE' || 'API'
 
 Execute with usage arguments
+
 `node bambooContact.js <bamboo-auth> <whispir-api-key> <whispir-auth> <whispir-workspaceId> optional:<bamboo-ED-inputFile>`
+
 To display usage help:
+
 `node bambooContact.js help`
