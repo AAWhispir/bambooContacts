@@ -1,7 +1,7 @@
 
 # README.md
 
-A script to access a BambooHR Enterprise Directory API and upload directory entries as Contacts to a Wh.ispir platform Workspace
+A script to access a BambooHR Enterprise Directory API and upload directory entries as Contacts to a Whispir platform Workspace.
 
 ### Some notes
 1. In this PoC script Employee ID (Bamboo id) is stored in personalFax1 in Whispir. This should be changed for production to an Employee ID field exposed for a customer workspace
