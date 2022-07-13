@@ -5,3 +5,11 @@
 3. All Whispir contact TZs are set to +10 AEDT. A custom function nto calculate TZ not implemented
 4. Could possibly use a better routine to determine/format valid mobile numbers for API
 5. Delay - The Add delay variable spaces API calls and Update delay is set for 1/5 of that
+
+To run this script supply through command line or modify the script with your:
+1. Bammboo API authorisation key. This can be obtained from a valid Bamboo account
+2. Execute 
+`node bambooContact.js <arguments>`
+Usage arguments: `<bamboo-auth> <whispir-api-key> <whispir-auth> <whispir-workspaceId> optional:<bamboo-ED-inputFile>`
+3. To display usage help:
+`node bambooContact.js help`
