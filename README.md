@@ -1,6 +1,6 @@
 // +++++++++++++++++++  Notes  ++++++++++++++++++++++
 // 1. In this PoC script Employee ID (Bamboo id) is stored in personalFax1 in Whispir. 
-//    This should be changed for production to Employee ID field exposed
+//    This should be changed for production to an Employee ID field exposed
 //    for customer workspace.
 //
 // 2. Functiom getWorkCountry() for resolving country info is due to Bamboo ED not
