@@ -7,7 +7,7 @@ var whispirAPIKey = 'XXXXXXXXXXXXXXXXXXXXXXXXX'
 var whispirAuth = 'YYYYYYYYYYYYYYYYYYY'
 var whispirWorkspaceId = '5479D28EC0AF645F'
 var bambooEDInputFile = 'BambooOutput2.json'
-var bambooSource = 'FILE' // 'FILE' || 'API'
+var bambooSource = 'API' // 'FILE' || 'API'
 var TZ = '+10'
 var delay = 800 // Add API Delay for initial loads to avoid transaction/sec limits
 
