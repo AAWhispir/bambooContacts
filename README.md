@@ -1,3 +1,4 @@
+# README.md
 // +++++++++++++++++++  Notes  ++++++++++++++++++++++
 // 1. In this PoC script Employee ID (Bamboo id) is stored in personalFax1 in Whispir. 
 //    This should be changed for production to an Employee ID field exposed
