@@ -178,6 +178,23 @@ const getNumbers = (val) => {
 
 }
 
+const getMessageOptions = (mobile, email) => {
+
+  return (
+
+    `"messagingoptions": [{
+      "channel": "sms",
+      "enabled": "${mobile ? "true" : "false"}",
+      "primary": "WorkMobilePhone1"
+     },{
+      "channel": "email",
+      "enabled": "${email ? "true" : "false"}",
+      "primary": "WorkEmailAddress1"
+     }]`
+  )
+
+}
+
 const checkContactInfoForUpdate = (master, existing) => {
 
   console.log(`Checking numbers:${master.id} ${master.firstName} ${master.lastName} ${master.mobilePhone} ${existing.workMobilePhone1}`)
@@ -217,7 +234,7 @@ async function addWhispirContact2(value = { firstName: 'Fred', lastName: 'Flints
       Authorization: `Basic ${whispirAuth}`
 
     },
-    body: `{\n  "firstName": "${value.firstName}",\n  "lastName": "${value.lastName}",\n  "workMobilePhone1": "${cleanNumbers(value.mobilePhone)}",\n  "workEmailAddress1": "${value.workEmail}",\n "personalFax1": "${value.id}",\n  "workCountry": "${getWorkCountry(value.location)}",\n  "timezone": "+10"}`
+    body: `{\n  "firstName": "${value.firstName}",\n  "lastName": "${value.lastName}",\n  "workMobilePhone1": "${cleanNumbers(value.mobilePhone)}",\n  "workEmailAddress1": "${value.workEmail}",\n "personalFax1": "${value.id}",\n  "workCountry": "${getWorkCountry(value.location)}",\n  "timezone": "+10", ${getMessageOptions(value.mobilePhone, value.workEmail)}}`
   }
 
   try {
@@ -239,6 +256,8 @@ async function updateWhispirContact2(value, wid) {
   myHeaders.append("Accept", "application/vnd.whispir.contact-v1+json")
   myHeaders.append("Authorization", `Basic ${whispirAuth}`)
 
+  let messageOptions = getMessageOptions(value.mobilePhone, value.workEmail)
+
   var raw = JSON.stringify({
 
     "firstName": value.firstName,
@@ -248,6 +267,7 @@ async function updateWhispirContact2(value, wid) {
     "workEmailAddress1": value.workEmail,
     "workMobilePhone1": cleanNumbers(value.mobilePhone),
     "workCountry": getWorkCountry(value.location),
+    messageOptions
 
   })
 
