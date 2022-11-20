@@ -11,7 +11,7 @@ A script to access a BambooHR Enterprise Directory API and upload directory entr
 5. Delay - The Add delay variable spaces API calls and Update delay is set for 20% of that
 
 To run this script supply through command line or modify the script with your:
-1. Bammboo API authorisation key. This can be obtained from a valid Bamboo account
+1. Bamboo API authorisation key. This can be obtained from a valid Bamboo account
 2. Whispir credentials (API Key and Authorisation credentials)
 3. Whispir Workspace ID
 4. A valid download of the Bamboo ED in .json format
